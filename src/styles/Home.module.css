@@ -7,3 +7,47 @@
   min-height: 100vh;
 }
 
+
+
+
+.orgChart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.orgChart li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  margin-right: 20px;
+}
+
+.orgChart li::before,
+.orgChart li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid red;
+  width: 50%;
+  height: 20px;
+}
+.orgChart li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid red;
+}
+/* .orgChart li:only-child::after,
+.orgChart li:only-child::before {
+  display: none;
+} */
+.orgChart li:last-child::before {
+  border-right: 1px solid red;
+}
+.orgChart li:last-child::before {
+  border-radius: 0 5px 0 0;
+}
+.orgChart li:first-child::after {
+  border-radius: 5px 0 0 0;
+}

@@ -2,8 +2,10 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 400px;
-  margin: 16px;
+  /* max-width:350px;
+  margin: 16px; */
+  margin-top: 4px;
+  margin-bottom: 4px;
   position: relative;
   display: flex;
   flex-direction: column;

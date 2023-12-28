@@ -1,23 +1,40 @@
 import Image from "next/image";
 import avatarImg from "../../public/avatar-icon.png";
 import styles from "../styles/Card.module.css";
-const Card = ({ name, role, team }) => {
+const Card = (props) => {
   return (
-    <div className={styles.card}>
-      <div className={styles.cardHeader}>
-        <Image src={avatarImg} alt={`${name}`} className={styles.avatar} />
-      </div>
-      <div className={styles.cardBody}>
-        <h2 className={styles.name}>{name}</h2>
-        <p className={styles.role}>
-          <span className={styles.label}>Role</span>
-          {role}
-        </p>
-        <p className={styles.team}>
-          <span className={styles.label}>Team</span>
-          {team}
-        </p>
-      </div>
+    <div>
+
+     <ul>
+     {props.data.map((item) => (
+        <li className="list-card">
+          <div className={styles.card}>
+            <div className={styles.cardHeader}>
+              <Image
+                src={avatarImg}
+                alt={`${item.name}`}
+                className={styles.avatar}
+              />
+            </div>
+            <div className={styles.cardBody}>
+              <h2 className={styles.name}>{item.name}</h2>
+              <p className={styles.role}>
+                <span className={styles.label}>Role</span>
+                {item.designation}
+              </p>
+              <p className={styles.team}>
+                <span className={styles.label}>Reporting Manager</span>
+                {item.reporting_manager}
+              </p>
+            </div>
+          </div>
+          {
+            console.log(item.children)
+          }
+          {item.children?.length && <Card data={item.children} />}
+        </li>
+      ))}
+     </ul>
     </div>
   );
 };

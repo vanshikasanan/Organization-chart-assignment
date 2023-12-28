@@ -16,10 +16,9 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Organization chart</h1>
-
-        {cardList.map((card) => (
-          <Card name={card?.name} role={card?.designation} team={card?.email} />
-        ))}
+        <div className={styles.orgChart}>
+          <Card data={cardList} />
+        </div>
       </main>
     </>
   );
