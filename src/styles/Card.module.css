@@ -2,16 +2,17 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  /* max-width:350px;
-  margin: 16px; */
-  margin-top: 4px;
-  margin-bottom: 4px;
+  max-width: 250px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  flex-grow: 1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
 }
-
 .card:before {
   content: "";
   position: absolute;
@@ -23,14 +24,28 @@
   border-radius: 8px 8px 0 0;
   z-index: 1;
 }
-.cardHeader {
-  position: relative;
-  margin-top: 16px;
+
+.list-card {
+  padding: 1.5rem;
+  margin: 1rem;
 }
 
 .cardBody {
   padding: 16px;
   width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  
 }
 
 .name {
@@ -40,18 +55,24 @@
 
 .role,
 .team {
-  margin-top: 8px;
-  margin-bottom: 0;
   padding: 8px;
 }
+.details p{
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .label {
+  height: 20px;
   background-color: var(--grey);
   font-weight: bold;
-  padding: 10px 5px;
+  padding: 5px 15px;
+  border-radius: 10%;
 }
+
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
 }
