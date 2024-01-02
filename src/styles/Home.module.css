@@ -11,7 +11,6 @@
   list-style-type: none;
   padding: 0;
   display: flex;
-  /* Use flexbox to align items horizontally */
 }
 
 .orgChart li {
