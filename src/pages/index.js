@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Card from "../components/Card";
-import cardList from "../data";
+import employees from "../data";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <main className={`${styles.main} ${inter.className}`}>
         <h1>Organization chart</h1>
         <div className={styles.orgChart}>
-          <Card data={cardList} />
+          <Card data={employees} />
         </div>
       </main>
     </>
