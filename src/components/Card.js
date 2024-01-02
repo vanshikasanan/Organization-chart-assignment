@@ -1,5 +1,7 @@
 import Image from "next/image";
 import avatarImg from "../../public/avatar-icon.png";
+import editIcon from "../../public/edit-icon.png";
+
 import styles from "../styles/Card.module.css";
 
 const Card = (props) => {
@@ -9,14 +11,20 @@ const Card = (props) => {
         {props.data.map((item) => (
           <li className="list-card" key={item.name}>
             <div className={styles.card}>
-              <div className={styles.cardHeader}>
+              <Image
+                src={editIcon}
+                alt="edit"
+                className={styles.edit}
+                width={20}
+                height={20}
+              />
+              <div className={styles.cardBody}>
                 <Image
                   src={avatarImg}
                   alt={`${item.name}`}
                   className={styles.avatar}
                 />
-              </div>
-              <div className={styles.cardBody}>
+
                 <div className={styles.info}>
                   <h4 className={styles.name}>{item.name}</h4>
                   <div className={styles.details}>
